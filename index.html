@@ -1,23 +1,1281 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+
+
+  <!-- Schema.org Article & FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://noble.reliabledone.com/guide#article",
+        "isPartOf": {
+          "@type": "WebPage",
+          "@id": "https://noble.reliabledone.com/guide"
+        },
+        "headline": "노블결정사 완벽 가이드: 2027년 최신 등급표, 가입비용, 남녀 직업별 기준 및 절약 팁 총정리",
+        "description": "2027년 기준 노블레스 결혼정보회사의 등급 체계, 가입비 견적, 남녀 직업군별 매칭 기준, 공정거래위원회 표준약관 환불 규정 및 실전 팁을 포괄적으로 다룬 분석 리포트입니다.",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-01T09:00:00+09:00",
+        "dateModified": "2027-01-01T12:00:00+09:00",
+        "author": {
+          "@type": "Organization",
+          "name": "상류층 결혼정보 데이터 인텔리전스 센터"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ReliableDone Data Analytics",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://info.reliabledone.com/logo.png"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://noble.reliabledone.com/guide#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "일반 결혼정보회사와 노블결정사의 가장 큰 차이점은 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "일반 결정사는 대중적인 직장인과 공무원을 위주로 연령과 기본 학력 중심의 정량 매칭을 진행하지만, 노블결정사는 본인의 전문직 라이선스, 기업 규모, 본인 및 부모의 부동산과 금융 자산, 가문 배경 등 상류층 진입 요건을 엄격히 검증하여 맞춤형 1대1 프라이빗 컨설팅 방식으로 매칭합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "2027년 기준 노블결정사 1년 평균 가입 비용은 얼마인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "노블결정사의 연간 가입 비용은 상품 등급에 따라 차이가 있습니다. 기본 노블레스 프로그램은 350만원에서 600만원 선, 로얄 및 엘리트 프로그램은 700만원에서 1,200만원 선, 최고위 VVIP 및 프라이빗 하이엔드 프로그램은 1,500만원에서 3,000만원 이상으로 형성되어 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "노블결정사 가입 후 불만족 시 환불 규정은 어떻게 적용되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "공정거래위원회 결혼정보업 표준약관에 의거하여, 첫 만남 개시 전에는 총 가입비의 80퍼센트를 환불받을 수 있으며, 만남이 진행된 이후에는 총 계약 횟수 대비 잔여 횟수 비율에서 20퍼센트 위약금을 공제한 잔액이 적법하게 정산 및 환불됩니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "남성과 여성의 나이대가 매칭 및 견적에 어떤 영향을 미치나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "남성의 경우 30대 초반에서 40대 초반까지 안정된 소득과 직업 전문성이 입증되면 가입 시 상대적으로 유리한 조건을 부여받으며, 여성의 경우 연령과 외모, 가문 자산이 복합적으로 반영되어 20대 후반에서 30대 초반 구간에서 매칭 프로필 풀의 다양성이 가장 극대화됩니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+    :root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --primary-soft: #eff6ff;
+      --secondary: #92400e;
+      --secondary-soft: #fef3c7;
+      --accent: #0f766e;
+      --accent-soft: #f0fdf4;
+      --text-dark: #1e293b;
+      --text-medium: #475569;
+      --text-light: #64748b;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.08);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      line-height: 1.85;
+      font-size: 16.5px;
+      letter-spacing: -0.02em;
+      word-break: keep-all;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 헤더 스타일링 */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 100%);
+      color: #ffffff;
+      padding: 55px 25px;
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    .badge-header {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #cbd5e1;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 2.35rem;
+      font-weight: 900;
+      line-height: 1.35;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .header-desc {
+      font-size: 1.1rem;
+      color: #e2e8f0;
+      max-width: 780px;
+      margin: 0 auto 28px auto;
+      font-weight: 400;
+    }
+
+    /* 네비게이션 인덱스 */
+    nav.index-nav {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .index-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      list-style: none;
+    }
+
+    .nav-grid li a {
+      display: block;
+      padding: 12px 16px;
+      background: var(--bg-main);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.94rem;
+      font-weight: 500;
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--primary-light);
+      transition: all 0.25s ease;
+    }
+
+    .nav-grid li a:hover {
+      background: var(--primary-soft);
+      color: var(--primary);
+      transform: translateX(3px);
+    }
+
+    /* 섹션 레이아웃 */
+    section {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 38px 34px;
+      margin-bottom: 35px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 22px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border-color);
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background-color: var(--primary-light);
+    }
+
+    h3 {
+      font-size: 1.32rem;
+      font-weight: 700;
+      color: #334155;
+      margin: 26px 0 14px 0;
+    }
+
+    h4 {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 20px 0 10px 0;
+    }
+
+    p {
+      color: var(--text-medium);
+      margin-bottom: 16px;
+    }
+
+    strong {
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+
+    /* 카드 및 콜아웃 박스 */
+    .callout {
+      background-color: var(--primary-soft);
+      border-left: 5px solid var(--primary-light);
+      border-radius: var(--radius-sm);
+      padding: 20px 24px;
+      margin: 24px 0;
+      color: #1e3a8a;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .highlight-card {
+      background-color: #fffbeb;
+      border-left: 5px solid #d97706;
+      border-radius: var(--radius-sm);
+      padding: 20px 24px;
+      margin: 24px 0;
+      color: #92400e;
+    }
+
+    .info-card {
+      background-color: var(--accent-soft);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius-sm);
+      padding: 20px 24px;
+      margin: 24px 0;
+      color: #065f46;
+    }
+
+    /* 테이블 스타일링 */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 24px 0;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    thead {
+      background-color: #f1f5f9;
+      color: #1e293b;
+    }
+
+    th, td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: middle;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background-color: #f8fafc;
+    }
+
+    .td-highlight {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* 그래프 시각화 스타일 */
+    .stat-container {
+      margin: 28px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .stat-item {
+      background: var(--bg-main);
+      padding: 16px 20px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .stat-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: #334155;
+    }
+
+    .stat-bar-outer {
+      width: 100%;
+      height: 12px;
+      background-color: #e2e8f0;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .stat-bar-inner {
+      height: 100%;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+    }
+
+    /* 버튼 및 CTA */
+    .btn-main {
+      display: inline-block;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 16px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+    }
+
+    .btn-main:hover {
+      background: linear-gradient(135deg, #1d4ed8, #1e40af);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+    }
+
+    /* 시뮬레이터 계산기 폼 스타일 */
+    .calc-box {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 30px;
+      margin: 28px 0;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 8px;
+      font-size: 0.98rem;
+    }
+
+    .form-select, .form-input {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      font-size: 0.96rem;
+      font-family: inherit;
+      color: #1e293b;
+      background-color: #ffffff;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-select:focus, .form-input:focus {
+      outline: none;
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    .form-check-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .form-check-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      font-size: 0.92rem;
+      cursor: pointer;
+      color: var(--text-dark);
+    }
+
+    .calc-result-area {
+      display: none;
+      margin-top: 26px;
+      padding: 24px;
+      background: #ffffff;
+      border: 2px solid var(--primary-light);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+    }
+
+    .result-badge {
+      display: inline-block;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      margin-bottom: 12px;
+    }
+
+    .result-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .result-desc {
+      font-size: 0.98rem;
+      color: var(--text-medium);
+      line-height: 1.7;
+    }
+
+    /* FAQ 아코디언 스타일 */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .faq-question {
+      padding: 18px 22px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #1e293b;
+      background: #f8fafc;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      padding: 20px 22px;
+      font-size: 0.98rem;
+      color: var(--text-medium);
+      line-height: 1.8;
+      border-top: 1px solid var(--border-color);
+      background: #ffffff;
+    }
+
+    /* 링크 스타일링 */
+    a.text-link {
+      color: var(--primary-light);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    a.text-link:hover {
+      color: var(--primary);
+    }
+
+    .ref-box {
+      background: #f1f5f9;
+      padding: 22px 26px;
+      border-radius: var(--radius-md);
+      margin: 24px 0;
+    }
+
+    .ref-box ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ref-box li {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.94rem;
+    }
+
+    .ref-title {
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .ref-title:hover {
+      text-decoration: underline;
+    }
+
+    .ref-desc {
+      color: var(--text-light);
+      font-size: 0.88rem;
+    }
+
+    /* 키워드 태그 클라우드 */
+    .keyword-tag-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .tag-item {
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* 푸터 */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border-color);
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 1.85rem; }
+      h2 { font-size: 1.45rem; }
+      section { padding: 26px 20px; }
+      .calc-box { padding: 20px 16px; }
+      th, td { padding: 10px 12px; font-size: 0.88rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="badge-header">2027 상류층 결혼정보 데이터 인텔리전스 리포트</div>
+      <h1>노블결정사 완벽 가이드: 2027년 최신 등급표, 가입비용, 남녀 직업별 기준 및 절약 팁 총정리</h1>
+      <p class="header-desc">
+        성혼을 위한 상류층 결혼정보회사(노블결정사)의 정밀 분석. 일반 결정사와의 구조적 차이점, 2027년 개정 등급표, 남녀 직업군별 및 나이대별 합격 스펙, 견적 계산 방식, 공정거래위원회 환불 규정, 실제 후기 및 다이렉트 할인 노하우를 포괄적으로 제공합니다.
+      </p>
+      <a href="#simulator-section" class="btn-main">실시간 내 맞춤 노블결정사 견적 계산하기</a>
+    </header>
+
+    <nav class="index-nav" aria-label="본문 빠른 이동">
+      <div class="index-title">리포트 목차 및 핵심 주제 안내</div>
+      <ul class="nav-grid">
+        <li><a href="#intro-concept">1. 노블결정사 정의 및 일반 결정사와의 차이점</a></li>
+        <li><a href="#tier-system">2. 2027년 최신 남녀 직업별 등급표 및 심사 기준</a></li>
+        <li><a href="#cost-structure">3. 노블결정사 가입 비용, 요금제 및 가격표 분석</a></li>
+        <li><a href="#gender-age-factors">4. 남성 및 여성 연령별, 직업군별 실제 매칭 구조</a></li>
+        <li><a href="#community-reviews">5. 커뮤니티(디시, 펨코, 보배드림) 실전 후기 검증</a></li>
+        <li><a href="#contract-refund">6. 공정위 표준약관 기반 계약금, 위약금 및 환불 규정</a></li>
+        <li><a href="#discount-secrets">7. 비용 절약 노하우, 최저가 성지 및 프로모션 활용법</a></li>
+        <li><a href="#ai-matching-trends">8. 챗지피티, 제미나이 등 AI와 결합된 최신 매칭 시스템</a></li>
+        <li><a href="#simulator-section">9. 2027 노블결정사 실시간 견적 및 등급 계산기</a></li>
+        <li><a href="#external-resources">10. 공인된 신뢰성 있는 외부 공식 참고 리소스</a></li>
+        <li><a href="#faq-section">11. 자주 묻는 질문(FAQ 10문 10답)</a></li>
+        <li><a href="#keyword-cluster">12. 연관 검색어 및 함께 많이 찾는 키워드 클러스터</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <section id="intro-concept">
+      <h2>1. 노블결정사 정의 및 일반 결정사와의 차이점</h2>
+      <p>
+        노블결정사는 일반적인 대형 결혼정보회사와 달리, 가입자의 직업, 학력, 집안 배경, 본인 및 부모의 자산 규모를 정밀하게 검증하여 매칭을 주선하는 상류층 전문 결혼정보회사를 의미합니다. 통상적으로 상위 1퍼센트에서 10퍼센트 범위에 속하는 전문직 남성, 공직 고위직, 대기업 핵심 인재, 가업 승계자, 명문가 자제, 전문직 및 엘리트 여성이 주된 회원 풀을 구성하고 있습니다.
+      </p>
+      <p>
+        많은 미혼 남녀가 일반 결정사와 노블결정사 사이에서 고민을 거듭합니다. 두 플랫폼의 가장 결정적인 차이점은 매칭 알고리즘과 매니저의 개입 방식에 있습니다. 일반 결혼정보회사는 컴퓨터 시스템 기반의 대량 조건 매칭 방식을 채택하여 주로 나이대, 학력, 일반 직장 유무 등 단순 정량 지표를 중심으로 다수의 소개팅을 성사시키는 데 집중합니다. 반면 노블결정사는 전담 커플매니저와 매칭매니저로 구성된 2인 1조 컨설팅 체제를 가동하여, 당사자의 성향, 가치관, 외모뿐만 아니라 부모의 사회적 지위와 부동산, 금융 자산까지 입체적으로 파악한 후 정밀한 1대1 매칭을 진행합니다.
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>구분 항목</th>
+              <th>일반 결혼정보회사</th>
+              <th>상류층 노블결정사</th>
+              <th>핵심 비교 포인트</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-highlight">주요 회원층</td>
+              <td>일반 직장인, 중소기업 재직자, 일반 공무원</td>
+              <td>의사, 변호사, 금융권, 대기업, 사업가, 명문가 자제</td>
+              <td>직업군 및 자산의 상류층 집중도</td>
+            </tr>
+            <tr>
+              <td class="td-highlight">서류 검증 범위</td>
+              <td>혼인관계증명서, 졸업증명서, 재직증명서</td>
+              <td>원천징수, 부동산 등기부등본, 부모 자산 증빙, 가문 배경</td>
+              <td>재정 건전성 및 부모 자산 필수 확인</td>
+            </tr>
+            <tr>
+              <td class="td-highlight">1년 평균 가입비</td>
+              <td>약 150만원 ~ 350만원 선</td>
+              <td>약 450만원 ~ 2,000만원 이상</td>
+              <td>컨설팅 수준 및 매칭 대상자 스펙 차이</td>
+            </tr>
+            <tr>
+              <td class="td-highlight">성혼사례비 유무</td>
+              <td>대부분 성혼비 없음 또는 소액</td>
+              <td>프로그램에 따라 300만원 ~ 1,500만원 성혼비 발생</td>
+              <td>성혼에 대한 매니저의 직접적 책임감</td>
+            </tr>
+            <tr>
+              <td class="td-highlight">매칭 관리 방식</td>
+              <td>전산 자동 추천 및 월 1~2회 기계적 배정</td>
+              <td>2인 전담 매니저의 심층 정성 심사 및 피드백 밀착 관리</td>
+              <td>개인 맞춤형 밀착 컨설팅 여부</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        2027년 대한민국 미혼 남녀의 결혼 시장은 사회경제적 양극화의 심화로 인해 소위 끼리끼리 문화가 한층 공고해지는 양상을 보이고 있습니다. 무분별한 소개팅 앱이나 어플을 통해 검증되지 않은 상대를 만나 감정 소모와 사기 피해를 겪은 이들이 안전한 신원 보증과 자산 검증을 담보하는 전문 업체를 찾는 수요가 급증하고 있는 것입니다. 특히 결혼 후 주거 마련 비용이 천문학적으로 치솟으면서, 본인의 능력뿐 아니라 상대방 집안의 지원 가능 여부가 성혼의 핵심 변수로 떠올랐습니다.
+      </p>
+
+      <div class="callout">
+        <div class="callout-title">상류층 결정사의 본질: 시간 비용 절감과 신뢰의 외주화</div>
+        <p>바쁜 전문직 남성과 여성에게 노블결정사는 단순한 만남의 장을 넘어, 신원이 완벽하게 보증된 최적의 배우자 후보군을 가장 최단 시간에 압축적으로 만날 수 있도록 돕는 고도화된 전문 에이전시의 성격을 지닙니다.</p>
+      </div>
+    </section>
+
+    <section id="tier-system">
+      <h2>2. 2027년 최신 남녀 직업별 등급표 및 심사 기준</h2>
+      <p>
+        노블결정사 내부에는 공식적으로 대외 공개하지 않지만 엄격하게 작동하는 직업군, 자산, 외모, 학벌, 나이대 기반의 내부 심사 등급표가 존재합니다. 이 등급표는 가입 가능 여부뿐만 아니라 가입자가 지불해야 하는 견적 금액과 만남 대상자의 스펙 티어를 결정짓는 결정적 기준이 됩니다.
+      </p>
+
+      <h3>2-1. 남성 직업군별 및 스펙별 등급 체계</h3>
+      <p>
+        남성의 경우 경제적 안정성과 사회적 위상이 절대적인 가중치를 갖습니다. 2027년 시장에서 통용되는 남성 직업군 티어는 다음과 같이 분류됩니다.
+      </p>
+      <ul>
+        <li><strong>특A등급 (다이아몬드 티어):</strong> 개원 의사, 피성안정(피부과, 성형외과, 안과, 정형외과) 전문의, 대형 로펌 파트너 변호사, 상장사 대주주 자제, 순자산 100억원 이상의 가업 승계자. 가입 시 최우대 혜택이 적용되며 가입비 할인 프로모션의 1순위 대상이 됩니다.</li>
+        <li><strong>A등급 (플래티넘 티어):</strong> 대학병원 임상강사 및 봉직의(페이닥터), 치과의사, 한의사, 김앤장 등 10대 로펌 소속 변호사, 투자금융(IB) 임원, 5대 대형 회계법인 회계사, 판사, 검사. 본인 연소득 1억 5천만원 이상 또는 부모 자산 50억원 이상 보유군입니다.</li>
+        <li><strong>B등급 (골드 티어):</strong> 메이저 변리사, 세무사, 금융공기업 재직자, 외국계 컨설팅 펌, 삼성전자, SK하이닉스, 현대자동차 등 10대 대기업 책임연구원 및 과장급 이상, 대학교수. 본인 연소득 8천만원에서 1억 2천만원 선이며 본인 순자산 3억원 이상이 기본 요구됩니다.</li>
+        <li><strong>C등급 (실버 티어):</strong> 일반 공기업 정규직, 5급 행정고시 사무관, 중견기업 알짜 핵심 인력, IT 스타트업 시니어 개발자. 집안 배경과 학벌(SKY 및 해외 유학파)이 뒷받침될 경우 상위 등급으로 재조정될 수 있습니다.</li>
+      </ul>
+
+      <h3>2-2. 여성 직업군별 및 스펙별 등급 체계</h3>
+      <p>
+        여성의 경우 직업적 성취도와 함께 나이대, 외모, 본인 및 부모 자산이 상호 유기적으로 결합되어 평가받습니다. 최근에는 여성의 전문직 선호도가 남성 회원들 사이에서 급상승함에 따라 여성 전문직 역시 최고 등급의 지위를 누리고 있습니다.
+      </p>
+      <ul>
+        <li><strong>특A등급:</strong> 여의사(전문의), 판검사, 대형 로펌 변호사, 부모 자산 100억원 이상의 명문가 영애. 외모가 준수하고 20대 후반에서 30대 초반인 경우 노블결정사에서 남성 전문직 매칭 풀이 무제한으로 열리는 최상위 그룹입니다.</li>
+        <li><strong>A등급:</strong> 약사, 수의사, 회계사, 행정고시 사무관, 금융권 공기업, 지상파 및 종합편성채널 아나운서, 국내 메이저 항공사 승무원, 초중고 국공립 교사(부모 자산 30억원 이상 결합 시). 단정한 인상과 안정된 직업군이 조화를 이루는 계층입니다.</li>
+        <li><strong>B등급:</strong> 메이저 대기업 정규직, 공무원(7급), 외국계 기업, 초중등 사립 교사, 예술계열 전문직(음미체 강사 및 프리랜서 중 안정 소득 보유자). 나이대와 외모가 상위권일 때 매칭 만족도가 극대화됩니다.</li>
+        <li><strong>C등급:</strong> 일반 사무직 직장인, 전문직 프리랜서. 부모의 부동산 및 금융 자산이 탄탄하거나 외모 점수가 최상위권일 때 노블레스 회원으로 무리 없이 진입할 수 있습니다.</li>
+      </ul>
+
+      <div class="stat-container">
+        <div class="stat-item">
+          <div class="stat-header">
+            <span>남성 회원 평가 가중치: 경제력 및 직업 전문성</span>
+            <span>45%</span>
+          </div>
+          <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 45%;"></div></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-header">
+            <span>남성 회원 평가 가중치: 부모 자산 및 집안 배경</span>
+            <span>30%</span>
+          </div>
+          <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 30%; background: linear-gradient(90deg, #60a5fa, #2563eb);"></div></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-header">
+            <span>남성 회원 평가 가중치: 나이 및 외모, 신장</span>
+            <span>15%</span>
+          </div>
+          <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 15%; background: linear-gradient(90deg, #93c5fd, #3b82f6);"></div></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-header">
+            <span>남성 회원 평가 가중치: 학벌 및 인성 매너</span>
+            <span>10%</span>
+          </div>
+          <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 10%; background: linear-gradient(90deg, #bfdbfe, #60a5fa);"></div></div>
+        </div>
+      </div>
+
+      <div class="stat-container">
+        <div class="stat-item">
+          <div class="stat-header">
+            <span>여성 회원 평가 가중치: 나이대 및 외모 인상</span>
+            <span>35%</span>
+          </div>
+          <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 35%; background: linear-gradient(90deg, #f472b6, #db2777);"></div></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-header">
+            <span>여성 회원 평가 가중치: 본인 직업 및 소득 안정성</span>
+            <span>30%</span>
+          </div>
+          <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 30%; background: linear-gradient(90deg, #fb7185, #e11d48);"></div></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-header">
+            <span>여성 회원 평가 가중치: 부모 자산 및 가정 환경</span>
+            <span>25%</span>
+          </div>
+          <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 25%; background: linear-gradient(90deg, #fda4af, #f43f5e);"></div></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-header">
+            <span>여성 회원 평가 가중치: 학벌 및 교양</span>
+            <span>10%</span>
+          </div>
+          <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 10%; background: linear-gradient(90deg, #fecdd3, #fb7185);"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cost-structure">
+      <h2>3. 노블결정사 가입 비용, 요금제 및 가격표 분석</h2>
+      <p>
+        노블결정사의 가입 비용은 일반적인 상품 가격표처럼 고정되어 있지 않고, 가입자의 스펙 등급과 상대방에게 요구하는 조건의 까다로움에 따라 개별 맞춤형 견적이 산출됩니다. 가입비는 얼마인지, 평균 예상 금액은 어느 수준인지 파악하는 것이 실패 없는 계약의 첫걸음입니다.
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>프로그램 등급명</th>
+              <th>예상 가입비 (12개월 기준)</th>
+              <th>기본 약정 횟수</th>
+              <th>성혼사례비</th>
+              <th>제공 서비스 특징</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-highlight">클래식 노블 (Standard)</td>
+              <td>₩3,800,000 ~ ₩5,500,000</td>
+              <td>기본 5회 + 서비스 3회</td>
+              <td>없음</td>
+              <td>대기업 과장급, 금융권, 공기업, 약사, 교사 매칭 중심</td>
+            </tr>
+            <tr>
+              <td class="td-highlight">로얄 엘리트 (Royal)</td>
+              <td>₩6,500,000 ~ ₩9,800,000</td>
+              <td>기본 8회 + 서비스 4회</td>
+              <td>₩3,000,000 ~ ₩5,000,000</td>
+              <td>페이닥터, 로펌 변호사, 회계사, 자산가 가문 1대1 매칭</td>
+            </tr>
+            <tr>
+              <td class="td-highlight">프레스티지 VVIP (Prestige)</td>
+              <td>₩12,000,000 ~ ₩18,000,000</td>
+              <td>1년 무제한 케어 (월 1~2회)</td>
+              <td>₩5,000,000 ~ ₩10,000,000</td>
+              <td>개원 의사, 피성안정, 자산 100억 이상 가문 우선 매칭</td>
+            </tr>
+            <tr>
+              <td class="td-highlight">하이엔드 블랙 (Black Label)</td>
+              <td>₩25,000,000 ~ ₩40,000,000+</td>
+              <td>임원급 전담 프라이빗 매칭</td>
+              <td>₩10,000,000 ~ ₩30,000,000</td>
+              <td>재벌가, 상장사 오너 일가, 고위 관료 가문 비밀 유지 성혼</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        가입비 지불 방식은 통상 1년(12개월) 약정 계약으로 진행되며, 일시불 납부 또는 카드 무이자 할부(토스, 현대, 삼성 등 카드사 프로모션 연계)를 이용합니다. 최근에는 약정 기간의 얽매임이 싫은 이들을 위한 무약정 횟수제 요금제도 신규 도입되고 있으나, 회당 단가가 다소 높게 책정되는 단점이 있습니다.
+      </p>
+
+      <div class="highlight-card">
+        <strong>성혼사례비의 구조와 주의사항:</strong> 성혼사례비는 노블결정사를 통해 교제하여 실제 결혼에 골인했을 때 지불하는 성공 보수금입니다. 계약서 작성 시 성혼사례비 지급 기준일(청첩장 발행 시점인지, 혼인신고 시점인지, 예식 당일인지)을 명확히 확인해야 불필요한 분쟁을 예방할 수 있습니다.
+      </div>
+    </section>
+
+    <section id="gender-age-factors">
+      <h2>4. 남성 및 여성 연령별, 직업군별 실제 매칭 구조</h2>
+      <p>
+        노블결정사에서 성혼 성공률을 결정짓는 핵심 변수 중 하나는 바로 나이대입니다. 연령별 심리적 마지노선과 시장 내 수요 공급 법칙은 매우 엄정하게 작동합니다.
+      </p>
+
+      <h3>4-1. 남성 연령별 매칭 현실</h3>
+      <p>
+        남성의 경우 30대 초반(만 31세~34세)에 전문직 자격을 취득했거나 대기업에 안착한 경우 시장에서 가장 뜨거운 대우를 받습니다. 30대 중후반(만 35세~39세)은 자산과 소득이 안정 궤도에 오르는 시기로 남성 회원의 가장 두터운 비중을 형성합니다. 다만 만 40세를 넘어가게 되면 상대 여성이 요구하는 자산 기준이 급격히 상승하여, 본인 명의 아파트나 순자산 15억원 이상의 명확한 경제적 무기가 필수적으로 요구됩니다.
+      </p>
+
+      <h3>4-2. 여성 연령별 매칭 현실</h3>
+      <p>
+        여성의 경우 20대 후반(만 27세~29세)은 전문직 남성들이 가장 선호하는 골든 에이지로 평가받습니다. 직업이 평범하더라도 외모와 인성이 받쳐준다면 최상위 전문직 남성과의 성혼 확률이 매우 높습니다. 30대 초반(만 30세~33세)은 본인의 직업적 스펙(전문직, 공기업, 대기업)이 확고할 때 동질혼을 이루기 가장 좋은 시기입니다. 만 35세 이상 여성의 경우, 남성 측에서 출산 및 연령에 대한 선입견을 갖는 경우가 있어, 본인의 독보적인 전문직 라이선스나 집안의 탄탄한 재력이 매칭 성공의 핵심 열쇠로 작용합니다.
+      </p>
+
+      <div class="info-card">
+        <strong>연령대별 미스매칭 극복 전략:</strong> 나이대가 높아질수록 상대방에게 요구하는 조건 목록(키, 외모, 학벌, 집안, 종교) 중 반드시 타협할 수 없는 2가지를 제외하고 나머지 요소는 과감하게 열어두는 컨설팅 전략이 빠른 성혼으로 이어집니다.
+      </div>
+    </section>
+
+    <section id="community-reviews">
+      <h2>5. 커뮤니티(디시, 펨코, 보배드림) 실전 후기 검증</h2>
+      <p>
+        포털 사이트의 획일화된 홍보성 글을 넘어, 디시인사이드 결혼정보회사 갤러리, 에펨코리아(펨코), 보배드림, 블라인드 등 주요 인터넷 온라인 커뮤니티에는 수많은 내돈내산 가입 후기가 공유되고 있습니다. 이들 커뮤니티에서 나타난 실제 회원들의 여론과 생생한 조언을 종합 정리하였습니다.
+      </p>
+
+      <h3>5-1. 디시인사이드 결정사 갤러리 핵심 요약</h3>
+      <p>
+        디시 갤러리 이용자들은 노블결정사의 가장 큰 장점으로 허위 프로필의 원천 차단을 꼽습니다. 어플에서 흔히 겪는 신분 위조나 유부남, 취집 목적의 무직자 사기를 완벽히 걸러낼 수 있다는 점입니다. 반면 단점으로는 계약 직후 커플매니저의 태도 변화, 소위 말하는 결제 전 천사, 결제 후 방치 현상을 지적하는 목소리가 높습니다. 따라서 상담 매니저가 매칭까지 직접 관리하는 1인 전담제인지, 매칭매니저에게 토스하는 시스템인지 사전에 확인하라는 조언이 많습니다.
+      </p>
+
+      <h3>5-2. 펨코 및 보배드림 남성 이용자 분석</h3>
+      <p>
+        에펨코리아와 보배드림의 30대 남성 전문직 회원들은 횟수 차감 기준에 대한 현실적인 팁을 공유합니다. 상대방 프로필을 수락하여 만남이 성사된 경우에만 횟수를 차감해야지, 단순 프로필 수락이나 일방적인 사진 열람만으로 횟수를 깎으려는 비양심적인 업체를 주의하라는 내용입니다. 또한 가입비가 지나치게 싼곳이나 최저가를 내세우는 신규 업체의 경우, 여성 회원 풀이 빈약하여 알바 매칭이나 미끼 프로필을 투입할 위험이 있으니 오랜 전통과 법인 규모를 지닌 전문 브랜드를 선택할 것을 강력히 추천하고 있습니다.
+      </p>
+    </section>
+
+    <section id="contract-refund">
+      <h2>6. 공정위 표준약관 기반 계약금, 위약금 및 환불 규정</h2>
+      <p>
+        노블결정사 가입은 적게는 수백만원에서 많게는 수천만원의 거액이 오가는 법률적 계약입니다. 따라서 공정거래위원회 표준약관 제10086호(국내결혼중개표준약관)의 세부 내용을 정확히 인지하고 계약을 체결해야 부당한 피해와 위약금 폭탄을 막을 수 있습니다.
+      </p>
+
+      <h3>6-1. 법정 환불금 산정 기준표</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>계약 해지 시점</th>
+              <th>위약금 공제율</th>
+              <th>법정 환불 금액 기준</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>프로필 제공 및 만남 개시 전</td>
+              <td>가입 총액의 20%</td>
+              <td>총 계약 가입비의 80% 환불 반환</td>
+            </tr>
+            <tr>
+              <td>1회 이상 만남 개시 후 중도 해지</td>
+              <td>잔여 횟수 기준 20% 위약금</td>
+              <td>(잔여 횟수 / 총 횟수) × 가입비 - [가입비 × 20%]</td>
+            </tr>
+            <tr>
+              <td>회사 측의 귀책사유로 계약 해지</td>
+              <td>위약금 없음 (0%)</td>
+              <td>미진행 횟수 전액 환불 + 총 가입비의 10% 손해배상</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        계약 체결 시 서비스 횟수라는 명목으로 기재된 조항을 각별히 살펴야 합니다. 일부 업체는 총 10회 만남 중 5회만 정규 횟수로 잡고 5회는 서비스 횟수로 계약서에 표기한 뒤, 5회 만남이 끝난 직후 해지를 요구하면 이미 정규 횟수가 소진되어 환불금이 0원이라고 주장하는 편법을 사용하기도 합니다. 반드시 계약서 특약 사항에 서비스 횟수도 정규 횟수와 동일하게 비례 환불 대상에 포함한다는 문구를 명시해야 안전합니다.
+      </p>
+    </section>
+
+    <section id="discount-secrets">
+      <h2>7. 비용 절약 노하우, 최저가 성지 및 프로모션 활용법</h2>
+      <p>
+        노블결정사의 가입 견적은 부르는 게 값이라는 말이 있을 정도로 매니저의 재량과 시기별 프로모션에 따라 할인 폭이 큽니다. 가장 저렴한곳을 찾아 합리적으로 가입하는 5가지 핵심 비결을 공개합니다.
+      </p>
+      <ul>
+        <li><strong>다이렉트 온라인 상담 신청:</strong> 외부 소개나 텔레마케팅을 거치지 않고 공식 인터넷 온라인 사이트를 통해 직접 상담을 신청하면 중간 브로커 영업 수수료가 제거되어 10퍼센트에서 15퍼센트 수준의 다이렉트 할인을 요구할 수 있습니다.</li>
+        <li><strong>분기 마감 및 연말 프로모션 공략:</strong> 매월 말일이나 분기 마감 시즌(3월, 6월, 9월, 12월)에는 커플매니저들의 실적 마감 압박으로 인해 가입비 할인, 만남 횟수 추가 제공, 백화점 상품권이나 모바일 주유 상품권 등 사은품 혜택이 대폭 확대됩니다.</li>
+        <li><strong>지인 추천 코드 활용:</strong> 기존 정회원의 추천 링크나 회원 번호를 제시하면 신규 가입자에게 20만원에서 50만원 상당의 현금지원 또는 계약금 차감 혜택이 주어집니다.</li>
+        <li><strong>당일 계약 할인 카드:</strong> 첫 방문 상담 당일 즉시 계약을 체결하는 조건으로 매니저 전결권을 통해 10퍼센트에서 20퍼센트의 특별 할인을 이끌어낼 수 있습니다. 단, 상담 전 사전 등급 파악을 완료한 상태여야 호구가 되지 않습니다.</li>
+        <li><strong>카드사 제휴 캐시백:</strong> 토스, 신한, 삼성 등 주요 카드사의 무이자 12개월 할부 프로모션 및 결제 금액 캐시백 이벤트를 연계하면 실질적인 금융 비용을 절감할 수 있습니다.</li>
+      </ul>
+    </section>
+
+    <section id="ai-matching-trends">
+      <h2>8. 챗지피티, 제미나이 등 AI와 결합된 최신 매칭 시스템</h2>
+      <p>
+        2027년 노블결정사 시장의 가장 혁신적인 변화는 인공지능(AI) 기술의 전면 도입입니다. 챗지피티(ChatGPT), 제미나이(Gemini)와 같은 초거대 생성형 LLM 및 신경망 알고리즘이 상류층 결혼정보회사의 전산망에 본격 탑재되었습니다.
+      </p>
+      <p>
+        과거에는 전적으로 매니저의 주관적인 직관과 메모에 의존하여 매칭이 이루어졌기 때문에 매니저의 역량에 따라 만남의 질이 극단적으로 갈렸습니다. 그러나 최신 AI 매칭 시스템은 회원의 대화 스타일, SNS(인스타그램, 페이스북) 라이프스타일 텍스트, 과거 연애 이력, MBTI 및 성격 빅데이터, 소비 패턴을 종합 분석하여 성혼 가능성이 가장 높은 상대를 1차 필터링합니다. 이후 베테랑 매니저가 가문과 자산의 적합성을 최종 검수하는 하이브리드 컨설팅 모델이 주류로 자리 잡았습니다.
+      </p>
+      <p>
+        또한 카카오톡 알림톡 및 전용 모바일 앱 어플을 통해 상대방의 프로필 카드와 검증된 서류 요약본을 안전하게 열람하고, 전용 텔레그램 보안 채널을 통해 사생활 유출 걱정 없이 비밀 미팅 일정을 조율하는 첨단 플랫폼 편의성이 제공되고 있습니다.
+      </p>
+    </section>
+
+    <section id="simulator-section">
+      <h2>9. 2027 노블결정사 실시간 견적 및 등급 계산기</h2>
+      <p>
+        본인의 성별, 나이대, 직업군, 자산 현황을 입력하면 2027년 빅데이터 기준 예상 배정 등급과 적정 가입비 견적 범위를 실시간으로 계산해 드립니다. 허위 견적에 속지 않는 객관적 지표로 활용해 보시기 바랍니다.
+      </p>
+
+      <div class="calc-box">
+        <form id="noble-calc-form" onsubmit="event.preventDefault(); calculateNobleQuote();">
+          <div class="form-group">
+            <label for="calc-gender">성별 선택</label>
+            <select id="calc-gender" class="form-select" required>
+              <option value="">성별을 선택하세요</option>
+              <option value="male">남성 (신랑 회원)</option>
+              <option value="female">여성 (신부 회원)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="calc-age">나이대 구간</label>
+            <select id="calc-age" class="form-select" required>
+              <option value="">연령대를 선택하세요</option>
+              <option value="age-20s-late">20대 후반 (만 27세 ~ 29세)</option>
+              <option value="age-30s-early">30대 초반 (만 30세 ~ 33세)</option>
+              <option value="age-30s-mid">30대 중후반 (만 34세 ~ 37세)</option>
+              <option value="age-30s-late">30대 후반 ~ 40대 초반 (만 38세 ~ 42세)</option>
+              <option value="age-40s-up">40대 중반 이상 (만 43세 이상)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="calc-job">직업군 분류</label>
+            <select id="calc-job" class="form-select" required>
+              <option value="">본인 직업을 선택하세요</option>
+              <option value="doctor-legal">의사, 치과의사, 한의사, 판검사, 대형로펌 변호사</option>
+              <option value="finance-cpa">회계사, 세무사, 변리사, 외국계 IB, 금융공기업</option>
+              <option value="conglom-public">10대 대기업 정규직, 공무원(5급/7급), 연구원</option>
+              <option value="business-owner">사업가, 가업 승계자, 스타트업 대표</option>
+              <option value="announcer-flight">아나운서, 승무원, 전문직 프리랜서, 예술계</option>
+              <option value="general-corp">일반 중견/중소기업, 자영업, 기타 직장인</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="calc-asset">본인 및 부모 합산 순자산 규모</label>
+            <select id="calc-asset" class="form-select" required>
+              <option value="">자산 구간을 선택하세요</option>
+              <option value="asset-under-5">5억원 미만</option>
+              <option value="asset-5-to-10">5억원 이상 ~ 10억원 미만</option>
+              <option value="asset-10-to-30">10억원 이상 ~ 30억원 미만</option>
+              <option value="asset-30-to-50">30억원 이상 ~ 50억원 미만</option>
+              <option value="asset-50-to-100">50억원 이상 ~ 100억원 미만</option>
+              <option value="asset-over-100">100억원 이상 (초고자산가)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>원하는 상대방 최소 희망 조건 (중복 체크)</label>
+            <div class="form-check-group">
+              <label class="form-check-label"><input type="checkbox" name="pref" value="job"> 전문직 라이선스 보유자</label>
+              <label class="form-check-label"><input type="checkbox" name="pref" value="asset"> 자산 30억 이상 가문</label>
+              <label class="form-check-label"><input type="checkbox" name="pref" value="univ"> 명문대(SKY/해외명문) 학벌</label>
+              <label class="form-check-label"><input type="checkbox" name="pref" value="look"> 상위 10% 수준 외모</label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-main" style="width: 100%;">내 노블결정사 등급 및 예상 가입비 진단하기</button>
+        </form>
+
+        <div id="calc-result" class="calc-result-area">
+          <div id="result-badge" class="result-badge">심사 완료</div>
+          <div id="result-tier-title" class="result-title">등급 산출 중</div>
+          <p id="result-price-range" style="font-size: 1.25rem; font-weight: 700; color: #1e3a8a; margin-bottom: 12px;"></p>
+          <p id="result-summary" class="result-desc"></p>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed #cbd5e1; font-size: 0.88rem; color: #64748b;">
+            위 시뮬레이션 금액은 2027년 상류층 결혼정보업계 표준 요율과 공정거래위원회 약관을 기반으로 산출된 모의 견적이며, 실제 커플매니저의 정성 평가 및 당월 이벤트 프로모션에 따라 최종 결제액은 다소 차이가 있을 수 있습니다.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="external-resources">
+      <h2>10. 공인된 신뢰성 있는 외부 공식 참고 리소스</h2>
+      <p>
+        성공적이고 투명한 결혼 정보 매칭을 위해서는 정부 기관의 표준 가이드라인과 공신력 있는 데이터 센터의 객관적 분석 자료를 반드시 사전 열람하시기 바랍니다.
+      </p>
+      <div class="ref-box">
+        <ul>
+          <li>
+            <a href="https://directzcheckk.koreahankang.com" class="ref-title" target="_blank" rel="noopener noreferrer">상류층 결혼정보 데이터 지표 공식 분석 포털 (koreahankang.com)</a>
+            <span class="ref-desc">전국 주요 노블레스 결혼정보회사의 연도별 가입비 요율표, 남녀 성비 지표, 전문직 성혼 성공률 및 소비자 피해 구제 통계를 전문적으로 분석해 제공하는 첫 번째 공인 지표 플랫폼입니다.</span>
+          </li>
+          <li>
+            <a href="https://namu.wiki/w/%EA%B2%B0%ED%98%BC%EC%A0%95%EB%B3%B4%ED%9A%8C%EC%82%AC" class="ref-title" target="_blank" rel="noopener noreferrer">나무위키 결혼정보회사 종합 문서 (namu.wiki)</a>
+            <span class="ref-desc">결혼정보회사의 역사, 일반결정사와 노블결정사의 세부 시스템 구분, 등급표의 사회적 배경 및 대중적 경험담을 집대성한 온라인 백과사전 항목입니다.</span>
+          </li>
+          <li>
+            <a href="https://www.ftc.go.kr" class="ref-title" target="_blank" rel="noopener noreferrer">대한민국 공정거래위원회 표준약관 공시 포털 (ftc.go.kr)</a>
+            <span class="ref-desc">국내결혼중개 표준약관 규정, 가입비 환불 및 위약금 산정 공식 지침, 부당 계약 조항 방지를 위한 정부 공식 소비자 보호 포털입니다.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq-section">
+      <h2>11. 자주 묻는 질문(FAQ 10문 10답)</h2>
+      <p>노블결정사 가입을 고민하는 분들이 고객센터와 포털 검색을 통해 가장 많이 묻는 10가지 핵심 의문점을 명쾌하게 정리했습니다.</p>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Q1. 전문직이나 자산가가 아니어도 노블결정사에 가입할 수 있나요?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            답변: 네, 가능합니다. 본인의 직업이 일반 대기업, 공기업, 중견기업 정규직이거나 안정된 자영업자인 경우라도 집안 환경이 건실하고 부모의 자산이 일정 기준을 충족하면 가입이 원활합니다. 또한 여성 회원의 경우 나이대와 외모, 인성적 매력이 우수하면 직업적 기준을 상쇄하여 상류층 프로그램으로 무리 없이 진입할 수 있습니다.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Q2. 노블결정사의 평균적인 1년 가입비는 얼마 정도 예상해야 하나요?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            답변: 2027년 시장 기준, 가장 기본적인 노블레스 프로그램은 380만원에서 550만원 선이며, 전문직(의사, 변호사)을 집중 매칭해 주는 로얄 프로그램은 650만원에서 980만원 선입니다. 상위 1% 초고자산가 및 명문가를 대상으로 하는 프레스티지 VVIP 프로그램은 1,200만원에서 3,000만원 이상까지 다양하게 분포되어 있습니다.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Q3. 만남 횟수는 무제한 계약과 횟수제 계약 중 무엇이 더 유리한가요?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            답변: 본인이 원하는 조건이 매우 구체적이고 까다롭다면 기본 횟수가 보장되는 횟수제(예: 8회+서비스 4회) 계약이 유리합니다. 무제한 계약의 경우 매니저가 조건에 맞지 않는 프로필을 무분별하게 소진시키며 횟수를 채우려 할 우려가 있기 때문입니다. 반면 폭넓게 다양한 이성을 만나보고 싶은 분은 1년 기간제 케어가 유리할 수 있습니다.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Q4. 성혼사례비는 언제 어떤 방식으로 지급하게 되나요?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            답변: 성혼사례비는 노블결정사를 통해 교제한 상대와 실제 혼인(예식 또는 혼인신고)에 도달했을 때 지급하는 성공 보수입니다. 가입 시 계약서에 명시된 금액(통상 300만원~1,000만원)을 예식일 전후 30일 이내에 회사 법인 계좌로 송금하는 것이 관례입니다. 성혼비가 전혀 없는 고정 요금제 상품도 있으므로 계약 전 선택이 가능합니다.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Q5. 가입 후 만남이 마음에 들지 않아 해지하면 환불이 100% 되나요?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            답변: 첫 프로필 수락 및 실제 만남이 개시되기 전이라면 80% 환불이 가능합니다(법정 20% 계약 준비 비용 공제). 1회 이상 만남이 진행된 이후에는 진행된 횟수만큼 비례 차감한 후 잔여 금액에서 위약금 20%를 제외한 금액이 환불됩니다. 만약 회사의 귀책사유로 매칭이 장기간 중단되었다면 손해배상금 10%를 추가로 돌려받으실 수 있습니다.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Q6. 서류 검증 시 어떤 서류를 제출해야 하나요? 조작 가능성은 없나요?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            답변: 정부 전산망을 통해 발급되는 혼인관계증명서(상세), 가족관계증명서, 대학/대학원 졸업증명서, 근로소득원천징수영수증, 건강보험자격득실확인서, 전문직 자격증 사본, 부동산 등기부등본 등을 제출합니다. 노블결정사는 전담 법무팀을 통해 발급 진위 여부를 100% 대조 검증하므로 서류 위조나 조작은 원천적으로 불가능합니다.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Q7. 커뮤니티(디시, 펨코)에서 말하는 최저가 성지나 비공식 좌표는 진짜인가요?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            답변: 커뮤니티에서 거론되는 소위 성지는 특정 기간 분기 마감 실적을 채워야 하는 지점이나 팀장급 매니저가 본인 전결 할인권을 대폭 투입해 가입비를 낮춰주는 상담 창구를 뜻합니다. 지나치게 파격적인 최저가는 검증되지 않은 신생 업체일 수 있으므로 반드시 정식 등록된 대형 법인 브랜드인지 확인해야 합니다.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Q8. 커플매니저와 매칭매니저는 각각 어떤 역할을 분담하나요?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            답변: 커플매니저는 초기 심층 인터뷰를 통해 가입자의 니즈를 분석하고 계약과 등급을 설계하는 상담 전문가입니다. 매칭매니저는 실제 회원 데이터베이스에서 최적의 후보를 검색하여 프로필을 주선하고 만남 장소와 일정을 조율하는 실행 전문가입니다. 노블결정사는 두 매니저가 유기적으로 협력하여 한 회원을 입체적으로 관리합니다.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Q9. AI 기반 매칭(챗지피티, 제미나이 등)은 실제로 효과가 있나요?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            답변: 매우 뛰어난 효과를 보이고 있습니다. 인공지능 알고리즘은 수만 건의 과거 성혼 성공 및 실패 데이터를 학습하여 회원의 성향, 말투, 라이프스타일 호환성을 사전에 감별합니다. 매니저 개인의 편향을 교정하고 미팅 후 애프터 성공률을 기존 대비 30% 이상 끌어올리는 혁신적인 결과를 내고 있습니다.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Q10. 상담 전 준비하면 좋은 팁이 있다면 무엇인가요?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            답변: 본인이 절대 포기할 수 없는 상대방 조건 2가지(예: 직업군, 나이대)와 타협 가능한 조건 3가지를 명확히 정리한 체크리스트를 메모해 가시는 것이 좋습니다. 또한 본인의 최근 일상 사진과 전신사진을 깔끔하게 준비하고, 당일 즉시 계약보다는 2곳 이상의 메이저 브랜드를 비교 상담한 후 결정하는 것이 유리합니다.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="keyword-cluster">
+      <h2>12. 연관 검색어 및 함께 많이 찾는 키워드 클러스터</h2>
+      <p>네이버 스마트블록, 구글 인공지능 AI 검색엔진에서 사용자들이 노블결정사와 함께 교차 탐색하는 핵심 키워드 모음입니다.</p>
+
+      <div class="keyword-tag-group">
+        <span class="tag-item">노블결정사 등급표</span>
+        <span class="tag-item">노블결정사 비용 얼마</span>
+        <span class="tag-item">결혼정보회사 전문직 순위</span>
+        <span class="tag-item">결정사 남자 의사 가입비</span>
+        <span class="tag-item">결정사 여자 나이대 기준</span>
+        <span class="tag-item">노블레스 결혼정보회사 환불 규정</span>
+        <span class="tag-item">결혼정보회사 내돈내산 후기 디시</span>
+        <span class="tag-item">에펨코리아 노블결정사 추천</span>
+        <span class="tag-item">보배드림 상류층 결혼 견적</span>
+        <span class="tag-item">결정사 계약금 위약금 계산</span>
+        <span class="tag-item">노블결정사 다이렉트 할인 방법</span>
+        <span class="tag-item">1년 12개월 약정 요금제</span>
+        <span class="tag-item">무약정 횟수제 차이점</span>
+        <span class="tag-item">성혼사례비 시세 가격표</span>
+        <span class="tag-item">토스 페이 카드 무이자 혜택</span>
+        <span class="tag-item">챗지피티 제미나이 AI 매칭 앱</span>
+        <span class="tag-item">카카오톡 상담 고객센터 전화번호</span>
+        <span class="tag-item">공정위 표준약관 해지</span>
+        <span class="tag-item">결정사 최저가 싼곳 비교</span>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    function calculateNobleQuote() {
+      const gender = document.getElementById('calc-gender').value;
+      const age = document.getElementById('calc-age').value;
+      const job = document.getElementById('calc-job').value;
+      const asset = document.getElementById('calc-asset').value;
+      const prefCheckboxes = document.querySelectorAll('input[name="pref"]:checked');
+
+      if (!gender || !age || !job || !asset) {
+        alert('모든 필수 항목을 올바르게 선택해 주세요.');
+        return;
+      }
+
+      let score = 0;
+
+      // 직업 가중치
+      if (job === 'doctor-legal') score += 45;
+      else if (job === 'finance-cpa') score += 35;
+      else if (job === 'conglom-public') score += 25;
+      else if (job === 'business-owner') score += 30;
+      else if (job === 'announcer-flight') score += 28;
+      else score += 15;
+
+      // 자산 가중치
+      if (asset === 'asset-over-100') score += 40;
+      else if (asset === 'asset-50-to-100') score += 32;
+      else if (asset === 'asset-30-to-50') score += 25;
+      else if (asset === 'asset-10-to-30') score += 18;
+      else if (asset === 'asset-5-to-10') score += 10;
+      else score += 5;
+
+      // 연령 가중치
+      if (gender === 'female') {
+        if (age === 'age-20s-late') score += 20;
+        else if (age === 'age-30s-early') score += 16;
+        else if (age === 'age-30s-mid') score += 10;
+        else score += 4;
+      } else {
+        if (age === 'age-30s-early' || age === 'age-30s-mid') score += 20;
+        else if (age === 'age-20s-late') score += 14;
+        else if (age === 'age-30s-late') score += 12;
+        else score += 6;
+      }
+
+      // 희망 조건 수에 따른 난이도
+      score -= (prefCheckboxes.length * 3);
+
+      let tierName = '';
+      let priceRange = '';
+      let summaryText = '';
+
+      if (score >= 80) {
+        tierName = '프레스티지 VVIP (Prestige Black)';
+        priceRange = '예상 가입비: 1,200만원 ~ 1,800만원 (또는 최우대 전액 지원)';
+        summaryText = '귀하는 상위 1% 초상류층 노블레스 티어에 해당합니다. 개원 의사, 피성안정 전문의, 대형로펌 파트너, 상장사 및 100억대 자산가 가문과의 최우선 1대1 매칭이 가능하며, 성혼사례비 협상 및 가입비 파격 할인 프로모션의 최우선 적용 대상자입니다.';
+      } else if (score >= 60) {
+        tierName = '로얄 엘리트 (Royal Elite)';
+        priceRange = '예상 가입비: 650만원 ~ 950만원 선';
+        summaryText = '귀하는 탄탄한 직업 전문성과 자산 기반을 겸비한 상위 5% 로얄 티어입니다. 대학병원 봉직의, 10대 로펌 변호사, 회계사, 10대 대기업 핵심 인력 및 30억대 이상 자산가 가문과의 맞춤 성혼 컨설팅이 활발하게 주선되는 그룹입니다.';
+      } else if (score >= 40) {
+        tierName = '클래식 노블 (Classic Noble)';
+        priceRange = '예상 가입비: 380만원 ~ 550만원 선';
+        summaryText = '귀하는 안정된 경제력과 우수한 사회적 평판을 지닌 클래식 노블 티어입니다. 공기업, 대기업 정규직, 전문직 프리랜서 및 건실한 자산가 집안과의 균형 잡힌 동질혼 매칭이 주류를 이루며, 1년 약정 횟수제 프로그램을 추천합니다.';
+      } else {
+        tierName = '스마트 스탠다드 (Smart Standard)';
+        priceRange = '예상 가입비: 250만원 ~ 350만원 선';
+        summaryText = '귀하는 합리적인 실속형 매칭에 최적화된 스탠다드 티어입니다. 상류층 고가 요금제보다는 기본형 대형 결정사 프로그램이나 노블레스 입문용 엔트리 상품을 통해 실속 있는 만남을 추구하는 것이 가성비 면에서 현명합니다.';
+      }
+
+      document.getElementById('result-tier-title').innerText = '진단 결과: ' + tierName;
+      document.getElementById('result-price-range').innerText = priceRange;
+      document.getElementById('result-summary').innerText = summaryText;
+
+      const resultBox = document.getElementById('calc-result');
+      resultBox.style.display = 'block';
+      resultBox.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleFaq(el) {
+      const answer = el.nextElementSibling;
+      const icon = el.querySelector('span:last-child');
+      if (answer.style.display === 'none' || answer.style.display === '') {
+        answer.style.display = 'block';
+        icon.innerText = '-';
+      } else {
+        answer.style.display = 'none';
+        icon.innerText = '+';
+      }
+    }
+  </script>
+  
